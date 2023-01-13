@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Menu Project</title>
+    <style>
+       body{
+         margin : 0px;
+     }
+     #header{
+         text-align: center;
+     }
+     #logo{
+         width : 250px;
+         height: auto;
+     }
+     #menu-bar{
+         text-align: center;
+         background-color: burlywood;
+     }
+     #menu-bar li{
+         display: inline;
+         padding: 15px 10px;
+         font-size: 20px;
+         font-weight: bold;
+     }
+     #container{
+         text-align: center;
+         padding: 50px 100px;
+     }
+     #about-img{
+         width: 70%;
+         height: auto;
+     }
+     .sticky{
+         position: fixed;
+         top : 0;
+         width: 100%;
+     }
+     #clear{
+         text-align: justify;
+     }
+     #clear{
+        font-size: large;
+        font-style: italic;
+        font-weight: 500;
+     }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.lFzSV5VJt6-u0E1znJ-enAHaDf&pid=Api&P=0" id="logo" alt="">
+    </div>
+    <nav id="menu-bar">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+        <li>Helpline</li>
+        <li>Careers</li>
+    </nav>
+    <div id="container">
+        <h1>About Us</h1>
+        <img  id="about-img" src="https://tse2.mm.bing.net/th?id=OIP.FNsKO6M8o2agIVJmC-znKgHaC0&pid=Api&P=0" alt="">
+        <p id="clear">
+            Lovely Professional University (LPU) is a Private University in North India created under the Punjab State Private University Act 2005 and recognized by UGC under Section 2(f) of UGC Act 1956. LPU has been offering more than 200 programs under 40+ disciplines.<br><br><br>
+
+            LPU is spread across more than 600 acres complete with a state-of-the-art infrastructure. The campus is free from the use of drugs, alcohol and smoking. Even ragging is an offense in the campus.
+
+Situated at the entrance of Jalandhar City on the National Highway-1, the campus itself look like a planned city with wide roads, gardens and lawns surrounding the residential complexes as well as the buildings for academic purposes. The university campus includes its own backup electricity and water supply, shopping complexes, eating joints, transportation facilities and banking and postal services. For healthcare assistance, the campus has a hospital that operates 24*7.<br><br><br>
+
+The campus has four major faculties--<br><br>
+
+1)Faculty of Technology & Sciences.<br>
+2)Faculty of Business & Arts.<br>
+3)Faculty of Applied Medical Sciences.<br>
+4)Faculty of Distance Education.<br><br><br>
+
+LPU have residential facilities with capacity for more than 20,000 students. The university provides a range of facilities within the university campus, separately for boys and girls. LPU understand that most of their students are moving away from home for the first time, so they strive to make the transition as smooth as possible. The university has a wide range of accommodation options. Campus entry is controlled by turnstile and there are CCTV surveillance cameras all round to ensure safety and security.
+
+
+
+        </p>
+    </div>
+    <script>
+        window.addEventListener('scroll',function()
+        {
+            let navbar = document.getElementById("menu-bar");
+            if(window.pageYOffset >= 121)
+            {
+           navbar.classList.add('sticky');
+            }
+            else{
+                navbar.classList.remove('sticky');
+            }
+        });  //anonymous function ... scroll event  
+
+        </script>
+</body>
+</html>
